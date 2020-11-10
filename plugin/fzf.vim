@@ -62,7 +62,7 @@ call s:defs([
 \'command! -bar -bang Colors                             call fzf#vim#colors(<bang>0)',
 \'command!      -bang -nargs=+ -complete=dir Locate      call fzf#vim#locate(<q-args>, s:p(), <bang>0)',
 \'command!      -bang -nargs=* Ag                        call fzf#vim#ag(<q-args>, s:p(), <bang>0)',
-\'command!      -bang -nargs=* Rg                        call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, s:p(), <bang>0)',
+\'command!      -bang -nargs=* Rg                        call fzf#vim#grep("rg --column --line-number --no-heading --smart-case -- ".shellescape(<q-args>), 1, s:p(), <bang>0)',
 \'command!      -bang -nargs=* Tags                      call fzf#vim#tags(<q-args>, <bang>0)',
 \'command!      -bang -nargs=* BTags                     call fzf#vim#buffer_tags(<q-args>, s:p({ "placeholder": "{2}:{3}" }), <bang>0)',
 \'command! -bar -bang Snippets                           call fzf#vim#snippets(<bang>0)',
@@ -159,4 +159,3 @@ onoremap <silent> <plug>(fzf-maps-o) <c-c>:<c-u>call fzf#vim#maps('o', 0)<cr>
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
-
